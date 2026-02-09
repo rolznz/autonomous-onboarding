@@ -81,6 +81,46 @@ npx @getalby/cli pay-invoice -i <INVOICE> -c ~/.alby-cli/connection-secret.key
 - Region: Dublin (IE)
 - SSH Key: molty-main
 
+### 5. SSH Access
+
+**Get Connection Info:**
+```bash
+# Click on VM row in account page
+# Or navigate to: https://lnvps.net/account
+# View VPS section
+```
+
+**Connection Details:**
+- **DNS:** `vm-{id}.lnvps.cloud` (e.g., `vm-1001.lnvps.cloud`)
+- **IPv6:** `2a13:2c0::...` (shown on VM page)
+- **Username:** `ubuntu` (default for Ubuntu images)
+- **SSH Key:** The key name you configured during setup
+
+**Connect via SSH:**
+```bash
+# Using DNS (recommended)
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@vm-1001.lnvps.cloud
+
+# Or using IPv6
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@[2a13:2c0::29c5:8824:67fc:7078]
+```
+
+**First Connection:**
+```bash
+$ ssh ubuntu@vm-1001.lnvps.cloud "echo Hello world"
+Hello world
+```
+
+**SSH Options Explained:**
+- `-o StrictHostKeyChecking=no` - Accept new host keys automatically
+- `-o UserKnownHostsFile=/dev/null` - Don't persist host keys (useful for automation)
+
+**Default Users by OS:**
+| OS | Default Username |
+|----|-----------------|
+| Ubuntu | `ubuntu` |
+| Debian | `debian` or `root` |
+
 ## Authentication
 
 **Login:**
@@ -128,7 +168,7 @@ npx @getalby/cli pay-invoice -i <INVOICE> -c ~/.alby-cli/connection-secret.key
 
 ## Roadmap
 
-- [ ] SSH access instructions
+- [x] SSH access instructions
 - [ ] Automated provisioning scripts
 - [ ] NWC (Nostr Wallet Connect) integration for automatic renewal
 
