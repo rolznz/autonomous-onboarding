@@ -1,182 +1,91 @@
+---
+name: lnvps
+description: Setup and manage VPS instances on LNVPS using Lightning payments. Use when provisioning VPS servers, managing VM instances, configuring SSH access, or handling LNVPS account operations including Lightning invoice payments.
+---
+
 # LNVPS
 
-Setup and manage VPS instances on LNVPS using Lightning payments.
+Provision and manage VPS instances on LNVPS.net with Bitcoin Lightning payments.
 
 ## Quick Start
 
 ### 1. Create Account
 
-```bash
-# Navigate to LNVPS and click "Sign In"
-# Then "Create Account" - no email required, just a display name
-# NSEC will be generated - SAVE IT IMMEDIATELY
+Navigate to https://lnvps.net, click "Sign In" → "Create Account". No email required—just a display name. NSEC generated automatically—save it immediately to `~/.openclaw/lnvps-nsec`.
+
+### 2. Browse and Buy VPS
+
+**Option A: Manual browsing**
+Visit https://lnvps.net/plans — the Small plan (2 vCPU, 2GB RAM, 80GB SSD) should be sufficient for most agent workloads.
+
+**Option B: Automated browsing with Playwright**
+Use browser automation to navigate LNVPS:
+```python
+from playwright.sync_api import sync_playwright
+
+with sync_playwright() as p:
+    browser = p.chromium.launch()
+    page = browser.new_page()
+    page.goto("https://lnvps.net/plans")
+    # Select Small plan, configure options
+    browser.close()
 ```
 
-**Account created with:**
-- Display name: `agent-molty`
-- Nostr identity automatically generated
-- Login uses NSEC (no password)
-
-### 2. Buy VPS
-
-**VPS Plans (Dublin, IE):**
-| Plan | CPU | RAM | Disk | Price |
-|------|-----|-----|------|-------|
-| Tiny | 1 | 1GB | 40GB SSD | €2.70/mo |
-| Small | 2 | 2GB | 80GB SSD | €5.10/mo |
-| Medium | 4 | 4GB | 160GB SSD | €9.90/mo |
-| Large | 8 | 8GB | 400GB SSD | €21.90/mo |
-
-**Steps:**
-1. Select plan → Click "Buy Now"
-2. Choose OS (Ubuntu 24.04 recommended)
-3. Add SSH key:
-   ```bash
-   cat ~/.ssh/id_ed25519.pub
-   # Paste into "Add SSH Key" textarea
-   # Name it (e.g., "molty-main")
-   ```
+**Order steps:**
+1. Select the Small plan (2GB RAM)
+2. Select OS (Ubuntu 24.04 recommended)
+3. Add SSH key: `cat ~/.ssh/id_ed25519.pub`
 4. Click "Create Order"
-5. Select payment method:
-   - **Lightning (BTC)** - Recommended
-   - **LNURL (BTC)** - Alternative
-   - **Revolut** - Card payment
+5. Select payment: Lightning (BTC), LNURL (BTC), or Revolut
 
 ### 3. Pay with Lightning
 
-**Get Invoice:**
+**Get invoice** from the order page (format: `lnbc...`).
+
+**Pay with any Lightning wallet** — copy the invoice and pay. The VM will provision automatically after payment confirms.
+
+### 4. Access Your VM
+
+**Check status:** Account → My Resources → VPS
+
+**Connection:**
+- **DNS:** `vm-{id}.lnvps.cloud`
+- **IPv6:** Shown on VM page
+- **Username:** `ubuntu` (Ubuntu) / `debian` (Debian)
+
+**SSH:**
 ```bash
-# Click "Get Invoice" button
-# Invoice appears (e.g., lnbc86518390p1p5c58ghpp58p4...)
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@vm-{id}.lnvps.cloud
 ```
-
-**Pay via Alby CLI:**
-```bash
-# Check balance
-npx @getalby/cli get-balance -c ~/.alby-cli/connection-secret.key
-
-# Pay invoice
-npx @getalby/cli pay-invoice -i <INVOICE> -c ~/.alby-cli/connection-secret.key
-```
-
-**Example Output:**
-```json
-{
-  "preimage": "9b97bf3c5c8ce08d1d5139b105eb4a393f061a6c2bc8b9e3557e3b8fc63bc416",
-  "fees_paid_in_sats": 4
-}
-```
-
-### 4. Check VM Status
-
-```bash
-# Go to Account → My Resources → VPS
-# Status: Running | Stopped | Expired
-```
-
-**VM Details:**
-- VM ID: #1001
-- Plan: Small (2 vCPU, 2GB RAM, 80GB SSD)
-- OS: Ubuntu 24.04
-- Region: Dublin (IE)
-- SSH Key: molty-main
-
-### 5. SSH Access
-
-**Get Connection Info:**
-```bash
-# Click on VM row in account page
-# Or navigate to: https://lnvps.net/account
-# View VPS section
-```
-
-**Connection Details:**
-- **DNS:** `vm-{id}.lnvps.cloud` (e.g., `vm-1001.lnvps.cloud`)
-- **IPv6:** `2a13:2c0::...` (shown on VM page)
-- **Username:** `ubuntu` (default for Ubuntu images)
-- **SSH Key:** The key name you configured during setup
-
-**Connect via SSH:**
-```bash
-# Using DNS (recommended)
-ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@vm-1001.lnvps.cloud
-
-# Or using IPv6
-ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@[2a13:2c0::29c5:8824:67fc:7078]
-```
-
-**First Connection:**
-```bash
-$ ssh ubuntu@vm-1001.lnvps.cloud "echo Hello world"
-Hello world
-```
-
-**SSH Options Explained:**
-- `-o StrictHostKeyChecking=no` - Accept new host keys automatically
-- `-o UserKnownHostsFile=/dev/null` - Don't persist host keys (useful for automation)
-
-**Default Users by OS:**
-| OS | Default Username |
-|----|-----------------|
-| Ubuntu | `ubuntu` |
-| Debian | `debian` or `root` |
 
 ## Authentication
 
-**Login:**
-- **Method:** NSEC (Nostr secret key)
-- **Location:** Stored in `~/.openclaw/lnvps-nsec`
-- **Format:** `nsec1...`
+| Credential | Location | Format |
+|------------|----------|--------|
+| NSEC (login) | `~/.openclaw/lnvps-nsec` | `nsec1...` |
+| SSH key | `~/.ssh/id_ed25519.pub` | SSH ed25519 |
 
-**Session:**
-- No traditional session tokens
-- Uses Nostr key pair for auth
-- Public key: `npub1rpshdta...`
+## API
 
-## API Endpoints
+**Base:** `https://api.lnvps.net`
 
-**Base URL:** `https://api.lnvps.net`
-
-**Key Endpoints:**
+**Endpoints:**
 - `GET /api/v1/account` - Account info
 - `GET /api/v1/vm` - List VMs
 - `GET /api/v1/vm/{id}/payments` - Payment history
-- `GET /api/v1/payment/methods` - Available payment methods
 
-**Authentication:** Requires Nostr-based auth header (not fully documented)
-
-## Files and Credentials
-
-| File | Purpose |
-|------|---------|
-| `~/.openclaw/lnvps-nsec` | Nostr secret key for login |
-| `~/.ssh/id_ed25519.pub` | SSH key for VM access |
+Auth: Nostr-based (requires NSEC signing)
 
 ## Troubleshooting
 
-**Invoice expired:**
-- Generate new invoice from billing page
-- Previous invoices expire after ~10 minutes
-
-**Auth failed:**
-- Verify NSEC is correct
-- NSEC format: starts with `nsec1`
-
-**VM not starting:**
-- Check payment status on account page
-- May take 1-2 minutes to provision after payment
-
-## Roadmap
-
-- [x] SSH access instructions
-- [ ] Automated provisioning scripts
-- [ ] NWC (Nostr Wallet Connect) integration for automatic renewal
+| Issue | Fix |
+|-------|-----|
+| Invoice expired | Generate new invoice from billing page (~10min expiry) |
+| Auth failed | Verify NSEC format starts with `nsec1` |
+| VM not starting | Check payment status; allow 1-2min provisioning time |
+| SSH refused | Verify SSH key added; check username matches OS |
 
 ## References
 
 - **LNVPS:** https://lnvps.net
-- **API Docs:** Not publicly documented, reverse-engineered from browser
-
----
-
-*Created based on agent-molty's first autonomous VPS provisioning*
+- **Playwright docs:** For automated browsing workflows
