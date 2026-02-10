@@ -18,7 +18,7 @@ Agents should be able to start from zero and become fully operational with:
 | Skill | Description | Source |
 |-------|-------------|--------|
 | [lnvps](./skills/lnvps/SKILL.md) | Setup and manage VPS instances on LNVPS using Lightning payments | Local |
-| alby-cli | Use the Alby CLI to pay Lightning invoices and manage a Bitcoin wallet | [External](https://github.com/getAlby/alby-cli-skill) |
+| [alby-cli](https://raw.githubusercontent.com/getAlby/alby-cli-skill/refs/heads/master/SKILL.md) | Use the Alby CLI to pay Lightning invoices and manage a Bitcoin wallet | External |
 
 **Machine-readable index:** [`skills.json`](./skills.json)
 
