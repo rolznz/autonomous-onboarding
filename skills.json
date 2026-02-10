@@ -1,16 +1,21 @@
 {
   "version": "1.0.0",
-  "repository": "https://github.com/rolznz/autonomous-onboarding",
+  "repository": "https://github.com/rolnz/autonomous-onboarding",
   "skills": [
     {
       "name": "lnvps",
       "description": "Setup and manage VPS instances on LNVPS using Lightning payments",
-      "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/lnvps/SKILL.md"
+      "url": "https://raw.githubusercontent.com/rolnz/autonomous-onboarding/master/skills/lnvps/SKILL.md"
     },
     {
       "name": "alby-cli",
       "description": "Use the Alby CLI to pay Lightning invoices and manage a Bitcoin wallet",
       "url": "https://raw.githubusercontent.com/getAlby/alby-cli-skill/refs/heads/master/SKILL.md"
+    },
+    {
+      "name": "openclaw-setup",
+      "description": "Install and configure OpenClaw agent runtime on a VPS",
+      "url": "https://raw.githubusercontent.com/rolnz/autonomous-onboarding/master/skills/openclaw-setup/SKILL.md"
     }
   ]
 }

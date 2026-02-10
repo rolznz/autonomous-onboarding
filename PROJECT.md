@@ -109,7 +109,7 @@ Agents must use:
 |-------|---------|--------|
 | lnvps | Provision VPS via Lightning | ✅ Available |
 | alby-cli | Lightning wallet operations | ✅ Available |
-| openclaw-setup | Install OpenClaw on VPS | 🚧 Needed |
+| openclaw-setup | Install OpenClaw on VPS | ✅ Available |
 
 ## Excluded Services
 
