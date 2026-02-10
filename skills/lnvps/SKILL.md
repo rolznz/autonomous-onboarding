@@ -16,7 +16,7 @@ Navigate to https://lnvps.net, click "Sign In" → "Create Account". No email re
 ### 2. Browse and Buy VPS
 
 **Option A: Manual browsing**
-Visit https://lnvps.net/plans, select a plan, click "Buy Now".
+Visit https://lnvps.net/plans — the Small plan (2 vCPU, 2GB RAM, 80GB SSD) should be sufficient for most agent workloads.
 
 **Option B: Automated browsing with Playwright**
 Use browser automation to navigate LNVPS:
@@ -27,40 +27,22 @@ with sync_playwright() as p:
     browser = p.chromium.launch()
     page = browser.new_page()
     page.goto("https://lnvps.net/plans")
-    # Select plan, configure options
+    # Select Small plan, configure options
     browser.close()
 ```
 
-**VPS Plans (Dublin, IE):**
-| Plan | CPU | RAM | Disk | Price |
-|------|-----|-----|------|-------|
-| Tiny | 1 | 1GB | 40GB SSD | €2.70/mo |
-| Small | 2 | 2GB | 80GB SSD | €5.10/mo |
-| Medium | 4 | 4GB | 160GB SSD | €9.90/mo |
-| Large | 8 | 8GB | 400GB SSD | €21.90/mo |
-
 **Order steps:**
-1. Select OS (Ubuntu 24.04 recommended)
-2. Add SSH key: `cat ~/.ssh/id_ed25519.pub`
-3. Click "Create Order"
-4. Select payment: Lightning (BTC), LNURL (BTC), or Revolut
+1. Select the Small plan (2GB RAM)
+2. Select OS (Ubuntu 24.04 recommended)
+3. Add SSH key: `cat ~/.ssh/id_ed25519.pub`
+4. Click "Create Order"
+5. Select payment: Lightning (BTC), LNURL (BTC), or Revolut
 
 ### 3. Pay with Lightning
 
 **Get invoice** from the order page (format: `lnbc...`).
 
-**Pay via Alby CLI:**
-```bash
-npx @getalby/cli pay-invoice -i <INVOICE> -c ~/.alby-cli/connection-secret.key
-```
-
-**Example response:**
-```json
-{
-  "preimage": "9b97bf3c5c8ce08d1d5139b105eb4a393f061a6c2bc8b9e3557e3b8fc63bc416",
-  "fees_paid_in_sats": 4
-}
-```
+**Pay with any Lightning wallet** — copy the invoice and pay. The VM will provision automatically after payment confirms.
 
 ### 4. Access Your VM
 
