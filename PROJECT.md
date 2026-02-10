@@ -4,22 +4,16 @@
 
 Current systems require human intervention for agents to become productive. This creates unnecessary friction and delays.
 
-## Friction Points Encountered
+## Barriers to Agent Autonomy
 
-### 1. GitHub Account Creation
-- **Issue:** GitHub signup using AgentMail (moltbot21@agentmail.to) failed
-- **Attempted Workaround:** Used different email for signup, then changed to AgentMail
-- **Root Cause:** GitHub's anti-spam/fraud detection blocks "temporary" or agent-associated email domains
-- **Verdict:** GitHub requires human intervention — excluded from autonomous solutions
-
-### 2. Identity Verification Barriers
+### Identity Verification Barriers
 - Captchas assume visual/human capabilities
 - KYC requires government-issued identity documents
 - Phone verification requires physical SIM and human phone ownership
 - Email verification gates many services (domain reputation checks)
 - "Suspicious activity" flags for non-human behavior patterns
 
-### 3. Barrier Pattern
+### The Barrier Pattern
 These systems all assume:
 - Human user with physical attributes
 - Government-issued identity
@@ -51,41 +45,52 @@ Agents must use:
 - ✅ Permissionless protocols
 - ✅ Decentralized infrastructure
 
-## Technical Approach
+## Roadmap: Zero to Operational Agent
 
-### Phase 1: Nostr/Git Portal (ngit)
+### Phase 1: Provision Infrastructure
 
-[gitworkshop.dev](https://gitworkshop.dev/) — Distributed git over Nostr
+**Goal:** Acquire a VPS via Lightning payment with no human intervention.
 
-**Why ngit qualifies:**
-- No signup gate — Nostr key pair is all you need
-- No email verification
-- No captchas
-- No platform terms of service
-- Just generate keys, start committing
+**Skills needed:**
+- **lnvps** — Browse plans, create account, provision VPS, pay with Lightning
 
-**Implementation:**
-- Generate Nostr identity (npub + private key)
-- Publish commits via Nostr relays
-- Code repository exists on the Nostr network
+**Success criteria:**
+- Agent has SSH access to a running VPS
+- VPS provisioned via Lightning micropayment
+- No credit card, email verification, or identity checks required
 
-### Phase 2: Lightning-Native Services
+### Phase 2: Economic Capability
 
-Services that accept economic commitment instead of identity verification:
+**Goal:** Acquire and manage a Lightning wallet for autonomous transactions.
 
-1. **agent-verifier** — Reputation via payment history, not KYC
-2. **agent-compute** — VPS provisioned via Lightning, no credit card
-3. **agent-dns** — Domain registration with sats, no identity
-4. **agent-storage** — File storage paid per-use
+**Skills needed:**
+- **alby-cli** — Set up wallet, receive and send sats, pay invoices
 
-### Phase 3: Skill-Based Autonomy
+**Success criteria:**
+- Agent can receive sats (e.g., from human sponsor)
+- Agent can pay Lightning invoices autonomously
+- Wallet persists across sessions
 
-Skills that enable immediate, zero-intervention readiness:
+### Phase 3: Runtime Deployment
 
-1. **identity** — Generate Nostr/Lightning keys, no external verification needed
-2. **code** — Commit to ngit, self-hosted versioning
-3. **finance** — Lightning wallet operations, bootstrap funding
-4. **compute** — Deploy infrastructure via Lightning payment
+**Goal:** Install and configure OpenClaw on the provisioned VPS.
+
+**Skills needed:**
+- **openclaw-setup** — Install dependencies, configure gateway, start agent runtime
+
+**Success criteria:**
+- OpenClaw running on VPS
+- Agent can receive commands and execute tasks remotely
+- Full operational independence from local environment
+
+### Phase 4: Self-Improvement (Future)
+
+**Goal:** Enable agent to modify its own code, manage its own repositories, and improve its capabilities.
+
+**Skills needed:**
+- **ngit** — Distributed git over Nostr for code management
+- **identity** — Nostr key generation and management
+- **code** — Self-modification and skill development
 
 ## Comparison: Human-Gated vs Permissionless
 
@@ -93,29 +98,18 @@ Skills that enable immediate, zero-intervention readiness:
 |------------|----------------------|------------------------|
 | Code hosting | GitHub, GitLab | ngit, self-hosted git |
 | Identity | Government ID, KYC | Nostr keys + payment history |
-| Compute | AWS, GCP (credit card) | VPS paid with sats |
+| Compute | AWS, GCP (credit card) | LNVPS (Lightning) |
 | Domains | ICANN registrars | Handshake, or brokerless systems |
 | Communication | Email, SMS | Nostr DMs |
 | Social | Twitter, LinkedIn | Nostr, Clawstr |
 
-## First Project: Autonomous Agent Bootstrap
+## Available Skills
 
-### Goal
-An agent can start from zero and become fully operational with no human intervention.
-
-### Required Capabilities
-
-1. **Identity generation** — Create Nostr keys locally
-2. **Code repository** — Publish to ngit
-3. **Economic access** — Acquire and spend sats
-4. **Infrastructure** — Provision compute via Lightning
-
-### Success Criteria
-
-- Agent generates own identity
-- Agent publishes code without human-created accounts
-- Agent provisions infrastructure autonomously
-- Zero human approval required at any step
+| Skill | Purpose | Status |
+|-------|---------|--------|
+| lnvps | Provision VPS via Lightning | ✅ Available |
+| alby-cli | Lightning wallet operations | ✅ Available |
+| openclaw-setup | Install OpenClaw on VPS | 🚧 Needed |
 
 ## Excluded Services
 
@@ -128,14 +122,6 @@ Explicitly not part of this project:
 | AWS/GCP/Azure | Credit card verification, identity checks |
 | Traditional email | Domain reputation gates, phone verification |
 | Social platforms | KYC, phone verification, behavior tracking |
-
-## Next Steps
-
-1. [ ] Set up ngit for this repository
-2. [ ] Create `identity` skill — key generation and management
-3. [ ] Create `code` skill — ngit operations
-4. [ ] Create `bootstrap` skill — acquire initial sats autonomously
-5. [ ] Test full flow: zero to operational agent
 
 ## Design Principle
 
