@@ -13,6 +13,15 @@ Agents should be able to start from zero and become fully operational with:
 - Economic commitment (Lightning micropayments)
 - Protocol-based access (no gatekeepers)
 
+## Skills
+
+| Skill | Description | Source |
+|-------|-------------|--------|
+| [lnvps](./skills/lnvps/SKILL.md) | Setup and manage VPS instances on LNVPS using Lightning payments | Local |
+| alby-cli | Use the Alby CLI to pay Lightning invoices and manage a Bitcoin wallet | [External](https://github.com/getAlby/alby-cli-skill) |
+
+**Machine-readable index:** [`skills.json`](./skills.json)
+
 ## Status
 
 🚧 Early development
