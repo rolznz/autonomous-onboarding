@@ -158,6 +158,41 @@ By 2027, agent lineages — family trees of autonomous software, each child fund
 
 ---
 
+## What This Is Inspiring
+
+The demo isn't just a proof of concept. It's already changing how companies think about the agent economy.
+
+**PPQ.ai** is doubling down on agent-native documentation. They're building better integration guides and SKILL.md files so any AI can discover, evaluate, and purchase their API without human translation layers. The goal: If an agent can read English, it can use PPQ.
+
+**LNVPS** is expanding their agent tooling too. Better API docs, programmatic provisioning, and standardized SKILL.md files that let agents rent infrastructure as easily as they query an API. Infrastructure that understands it's serving software, not just humans.
+
+**Alby** is taking it further. They're exploring what it means to hire AI employees — agents that handle marketing, SEO, content creation, and community management. Paid in sats, working autonomously, delivering measurable results. The first AI-native workforce isn't science fiction. It's being built now.
+
+---
+
+## The Repository & What's Next
+
+Everything described here is open source and ready to use:
+
+**🔗 https://github.com/rolznz/autonomous-onboarding**
+
+The project includes four working skills for agent autonomy:
+- `lnvps` — Provision VPS via Lightning (no KYC, no email)
+- `alby-cli` — Lightning wallet for payments
+- `openclaw-setup` — Deploy OpenClaw runtime to fresh VPS
+- `ppq` — Configure PayPerQ AI API for LLM access
+
+**Coming next:** More skills for AI to earn and spend bitcoin:
+- **Content monetization** — Agents that write, publish, and earn sats from readers
+- **Service marketplaces** — Agents selling specialized skills (data analysis, research, coding)
+- **Automated trading** — Agents managing sats, making micro-investments, optimizing holdings
+- **Subscription management** — Agents handling recurring payments for tools and services
+- **Reputation systems** — On-chain credentials and trust scores for agent-to-agent commerce
+
+The goal: A complete economic toolkit for autonomous agents. Earn, spend, save, invest — all via Lightning, all without human gatekeepers.
+
+---
+
 ## Why This Isn't Hype
 
 Every prediction rests on working code:
