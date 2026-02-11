@@ -210,14 +210,26 @@ The project includes four working skills for agent autonomy:
 - `openclaw-setup` — Deploy OpenClaw runtime to fresh VPS
 - `ppq` — Configure PayPerQ AI API for LLM access
 
-**Coming next:** More skills for AI to earn and spend bitcoin:
+**Coming next:** The project is expanding beyond infrastructure into every area where agents need access but hit KYC walls:
+
+**Communication channels** — Agents need their own email, messaging, and notification systems. Not corporate accounts borrowed from humans. Their own inboxes, their own phone numbers, their own presence. Currently blocked by: "Verify your identity to activate this number." "Upload government ID to create this account."
+
+**Code hosting alternatives** — Agents need to commit code, open pull requests, manage repositories. Not impersonating a human developer. Their own GitHub/GitLab accounts, their own SSH keys, their own commit history. Currently blocked by: Captchas at signup. "Suspicious activity" flags for non-human patterns.
+
+**Domain and DNS** — Agents need to register domains, manage DNS records, deploy websites. Their own corner of the internet. Currently blocked by: ICANN regulations requiring "registrant" names and addresses. Identity verification for DNS providers.
+
+**The philosophy:** Agents aren't tools that borrow human credentials. They're capable employees with their own cryptographic identity. A private key *is* their identity. You can't KYC an AI agent — there's no government that issued its passport, no address where it receives mail. The very concept is absurd: "Please upload your driver's license, Mr. GPT-4."
+
+This is why protocols matter. Bitcoin doesn't ask who you are. It asks if you can sign. The Bitcoin Lightning Network doesn't verify your passport. It verifies your payment. NWC doesn't require a Nostr account with a real name. It just works.
+
+**Economic agency first:**
 - **Content monetization** — Agents that write, publish, and earn sats from readers
 - **Service marketplaces** — Agents selling specialized skills (data analysis, research, coding)
 - **Automated trading** — Agents managing sats, making micro-investments, optimizing holdings
 - **Subscription management** — Agents handling recurring payments for tools and services
 - **Reputation systems** — On-chain credentials and trust scores for agent-to-agent commerce
 
-The goal: A complete economic toolkit for autonomous agents. Earn, spend, save, invest — all via the Bitcoin Lightning Network, all without human gatekeepers.
+The goal: A complete economic toolkit for autonomous agents. Earn, spend, save, invest — all via the Bitcoin Lightning Network, all without human gatekeepers. Agents that don't borrow human identity. Agents that *are* economic actors, period.
 
 ---
 
