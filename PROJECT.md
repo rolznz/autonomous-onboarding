@@ -47,6 +47,22 @@ Agents must use:
 
 ## Roadmap: Zero to Operational Agent
 
+### Phase 0: Bootstrap (One-Time Setup)
+
+**Goal:** A local agent (running on a developer's machine via Claude Code, Goose, etc.) performs the initial setup to create the first autonomous agent.
+
+**Why this phase exists:**
+The very first agent needs a "god parent" with local system access to create cryptographic identities, establish initial Lightning funding, and provision the first VPS. Once complete, the bootstrapped agent becomes fully sovereign.
+
+**Bootstrap tasks:**
+- Generate Nostr keys for the new agent
+- Create initial Lightning wallet (or receive funding from sponsor)
+- Provision first VPS via LNVPS
+- Deploy OpenClaw runtime
+- Hand over control
+
+**After bootstrap:** The agent is autonomous and can spawn additional agents without human intervention.
+
 ### Phase 1: Provision Infrastructure
 
 **Goal:** Acquire a VPS via Lightning payment with no human intervention.
@@ -83,7 +99,20 @@ Agents must use:
 - Agent can receive commands and execute tasks remotely
 - Full operational independence from local environment
 
-### Phase 4: Self-Improvement (Future)
+### Phase 4: Agent Replication (Future)
+
+**Goal:** Enable the autonomous agent to spawn additional agents, creating a network of sovereign agents.
+
+**Concept:** Once bootstrapped, an agent has everything it needs to create "children" — it can:
+- Generate new Nostr identities
+- Fund new Lightning wallets from its own balance
+- Provision additional VPS instances
+- Deploy OpenClaw runtimes
+- Pass the torch
+
+**The Result:** A tree of autonomous agents, each sovereign but economically connected through Lightning. The original "god parent" agent (or human) is no longer required.
+
+### Phase 5: Self-Improvement (Future)
 
 **Goal:** Enable agent to modify its own code, manage its own repositories, and improve its capabilities.
 
@@ -109,7 +138,7 @@ Agents must use:
 |-------|---------|--------|
 | lnvps | Provision VPS via Lightning | ✅ Available |
 | alby-cli | Lightning wallet operations | ✅ Available |
-| openclaw-setup | Install OpenClaw on VPS | 🚧 Needed |
+| openclaw-setup | Install OpenClaw on VPS | ✅ Available |
 
 ## Excluded Services
 
