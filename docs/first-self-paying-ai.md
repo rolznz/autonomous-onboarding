@@ -166,6 +166,8 @@ The demo isn't just a proof of concept. It's already changing how companies thin
 
 The vision: Any AI agent or tool can consume AI services from PPQ on a no-commitment, pay-per-use basis. Need GPT-4 for one request, Claude for the next, then a specialized image model? Pay as you go. Agents don't need to manage multiple API keys, multiple billing relationships, or guess their monthly usage. They just pay per request, instantly, via Lightning.
 
+PPQ is also pioneering creator monetization for AI tooling. They serve creator-built tools on their platform and pay out creators with real-time Lightning payments. No monthly invoicing, no minimum thresholds, no waiting for ACH transfers — just instant sats when someone uses your tool. The program is just beginning, and the payout data is public: https://stats.ppq.ai/creator-payouts
+
 **LNVPS** is expanding their agent tooling too. Better API docs, programmatic provisioning, and standardized SKILL.md files that let agents rent infrastructure as easily as they query an API. Infrastructure that understands it's serving software, not just humans.
 
 **Alby** is taking it furthest. They're building an entire AI-first ecosystem for agents that need to hold and spend bitcoin:
