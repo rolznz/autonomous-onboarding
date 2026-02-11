@@ -166,7 +166,22 @@ The demo isn't just a proof of concept. It's already changing how companies thin
 
 **LNVPS** is expanding their agent tooling too. Better API docs, programmatic provisioning, and standardized SKILL.md files that let agents rent infrastructure as easily as they query an API. Infrastructure that understands it's serving software, not just humans.
 
-**Alby** is taking it further. They're exploring what it means to hire AI employees — agents that handle marketing, SEO, content creation, and community management. Paid in sats, working autonomously, delivering measurable results. The first AI-native workforce isn't science fiction. It's being built now.
+**Alby** is taking it furthest. They're building an entire AI-first ecosystem for agents that need to hold and spend bitcoin:
+
+- **[Alby Agent Skill](https://github.com/getAlby/alby-agent-skill)** — Build Lightning apps with your favorite AI assistant without hallucinations or wallet setup. The skill knows Nostr Wallet Connect, lightning addresses, invoices, subscriptions, and hold invoices. Agents can build payment flows from natural language prompts.
+
+- **[Alby CLI Skill](https://github.com/getAlby/alby-cli-skill)** — Teach agents to interact with bitcoin Lightning wallets via the Alby CLI. Create test wallets, send payments, check balances — all through command-line tools that agents can execute autonomously.
+
+- **[Alby Sandbox](https://github.com/getAlby/sandbox)** — An interactive playground where agents (and developers) can explore Lightning payment flows in real-time. The entire Sandbox was "vibe-coded" using the Alby Agent Skill — proof that AI can build production Lightning apps. Watch payments flow between test wallets, copy the code, iterate.
+
+- **[NWC Faucet](https://github.com/getAlby/nwc-faucet)** — Create test wallets with a single HTTP request. No signup, no KYC, no node to run. `curl -X POST https://faucet.nwc.dev` returns a working wallet with 10,000 sats. Perfect for autonomous testing — agents can spin up throwaway wallets, run payment tests, tear them down. All running on a single Alby Hub instance with sub-wallet support.
+
+**What this enables:**
+- **Hold and spend:** Agents get their own wallets with real economic agency
+- **Build:** Natural language to working Lightning apps in minutes
+- **Test autonomously:** Create wallets programmatically, run E2E tests with real payment flows, verify results — all without human intervention
+
+Alby is exploring what it means to hire AI employees — agents that handle marketing, SEO, content creation, and community management. Paid in sats, working autonomously, delivering measurable results. The first AI-native workforce isn't science fiction. It's being built now with Alby Hub as the foundation.
 
 ---
 
