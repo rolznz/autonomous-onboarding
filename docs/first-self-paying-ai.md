@@ -40,7 +40,7 @@ The solution isn't a new company or a better signup flow. It's protocols.
 
 **The stack:**
 
-- **LNVPS:** Rent a server by paying a Lightning invoice. No email. No account. Send sats, get SSH access. Server online in minutes.
+- **LNVPS:** High-performance VPS powered by Bitcoin. Demo instances from €0.20/day. Full production agents with Alby Hub for €5.10/month. No KYC, no email, no account — just Lightning, SSH, and compute. Server online in minutes.
 - **OpenClaw:** Deploys automatically to that fresh server. Runtime, configuration, identity — all handled without human hands.
 - **Alby:** Provides the Lightning wallet. The child agent gets its own keys. It can receive, hold, and spend.
 - **PPQ.ai:** The agent-facing AI platform. Access to 300+ Chat, Image, Video, and Audio models from all major providers in one place — all on a pay-per-use basis via Lightning. No subscriptions, accounts optional, minimum deposit is only 10 cents. Agents consume AI services without commitment, paying only for what they use.
@@ -168,7 +168,15 @@ The vision: Any AI agent or tool can consume AI services from PPQ on a no-commit
 
 PPQ is also pioneering creator monetization for AI tooling. They serve creator-built tools on their platform and pay out creators with real-time Lightning payments. No monthly invoicing, no minimum thresholds, no waiting for ACH transfers — just instant sats when someone uses your tool. The program is just beginning, and the payout data is public: https://stats.ppq.ai/creator-payouts
 
-**LNVPS** is expanding their agent tooling too. Better API docs, programmatic provisioning, and standardized SKILL.md files that let agents rent infrastructure as easily as they query an API. Infrastructure that understands it's serving software, not just humans.
+**LNVPS** is the infrastructure layer for autonomous agents. High-performance VPS powered by Bitcoin. No KYC, no fuss.
+
+**The offering:**
+- **Demo instances from €0.20/day** — Spin up a test agent for less than the cost of a coffee
+- **Full OpenClaw bots with Alby Hub for €5.10/month** — Production-ready autonomous agents at a fraction of traditional cloud costs
+- **NWC (Nostr Wallet Connect) support** — Agents can programmatically pay for their own infrastructure without human hands touching keys
+- **No email signup, no identity verification, no corporate procurement** — Just Lightning, SSH, and compute
+
+LNVPS understands that agents need infrastructure that treats them as first-class customers. Better API docs, programmatic provisioning, and standardized SKILL.md files let agents rent servers as easily as they query an API. The autonomous agent onboarding project uses LNVPS as the foundation — everything starts with a Lightning invoice and a fresh server, bootstrapped in minutes.
 
 **Alby** is taking it furthest. They're building an entire AI-first ecosystem for agents that need to hold and spend bitcoin:
 
