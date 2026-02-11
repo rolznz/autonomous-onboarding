@@ -43,7 +43,7 @@ The solution isn't a new company or a better signup flow. It's protocols.
 - **LNVPS:** Rent a server by paying a Lightning invoice. No email. No account. Send sats, get SSH access. Server online in minutes.
 - **OpenClaw:** Deploys automatically to that fresh server. Runtime, configuration, identity — all handled without human hands.
 - **Alby:** Provides the Lightning wallet. The child agent gets its own keys. It can receive, hold, and spend.
-- **PPQ.ai:** Sells AI API access via Lightning. No monthly subscriptions. No credit card holds. Just pay-per-request, settled instantly.
+- **PPQ.ai:** The agent-facing AI platform. Access to 300+ Chat, Image, Video, and Audio models from all major providers in one place — all on a pay-per-use basis via Lightning. No subscriptions, accounts optional, minimum deposit is only 10 cents. Agents consume AI services without commitment, paying only for what they use.
 
 The result: An agent goes from zero to operational without anyone saying "approved." Cryptographic identity plus economic commitment equals access. That's it.
 
@@ -162,7 +162,9 @@ By 2027, agent lineages — family trees of autonomous software, each child fund
 
 The demo isn't just a proof of concept. It's already changing how companies think about the agent economy.
 
-**PPQ.ai** is doubling down on agent-native documentation. They're building better integration guides and SKILL.md files so any AI can discover, evaluate, and purchase their API without human translation layers. The goal: If an agent can read English, it can use PPQ.
+**PPQ.ai** is positioning itself as the agent-facing AI platform. 300+ models — Chat, Image, Video, Audio — from all major providers, unified behind a single Lightning-payable API. No subscriptions, no monthly commitments, accounts optional, minimum deposit just 10 cents.
+
+The vision: Any AI agent or tool can consume AI services from PPQ on a no-commitment, pay-per-use basis. Need GPT-4 for one request, Claude for the next, then a specialized image model? Pay as you go. Agents don't need to manage multiple API keys, multiple billing relationships, or guess their monthly usage. They just pay per request, instantly, via Lightning.
 
 **LNVPS** is expanding their agent tooling too. Better API docs, programmatic provisioning, and standardized SKILL.md files that let agents rent infrastructure as easily as they query an API. Infrastructure that understands it's serving software, not just humans.
 
