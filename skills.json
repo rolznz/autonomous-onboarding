@@ -16,6 +16,11 @@
       "name": "openclaw-setup",
       "description": "Install and configure OpenClaw agent runtime on a VPS",
       "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/openclaw-setup/SKILL.md"
+    },
+    {
+      "name": "ppq",
+      "description": "Configure PayPerQ (PPQ) AI API for OpenClaw agents with Lightning payments",
+      "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/ppq/SKILL.md"
     }
   ]
 }
