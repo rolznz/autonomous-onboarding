@@ -122,6 +122,14 @@ Edit `~/.openclaw/openclaw.json`:
 openclaw models set ppq/moonshotai/kimi-k2.5
 ```
 
+### 4. Restart the Gateway
+
+After configuring the model, restart the OpenClaw gateway to apply the changes:
+
+```bash
+openclaw gateway restart
+```
+
 ## API Endpoints
 
 | Endpoint | Description |

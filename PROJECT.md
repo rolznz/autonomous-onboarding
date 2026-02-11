@@ -93,10 +93,12 @@ The very first agent needs a "god parent" with local system access to create cry
 
 **Skills needed:**
 - **openclaw-setup** — Install dependencies, configure gateway, start agent runtime
+- **ppq** — Configure PayPerQ AI API for LLM access via Lightning payments
 
 **Success criteria:**
 - OpenClaw running on VPS
 - Agent can receive commands and execute tasks remotely
+- LLM access configured via Lightning-paid API
 - Full operational independence from local environment
 
 ### Phase 4: Agent Replication (Future)
@@ -139,6 +141,7 @@ The very first agent needs a "god parent" with local system access to create cry
 | lnvps | Provision VPS via Lightning | ✅ Available |
 | alby-cli | Lightning wallet operations | ✅ Available |
 | openclaw-setup | Install OpenClaw on VPS | ✅ Available |
+| ppq | Configure PayPerQ AI API | ✅ Available |
 
 ## Excluded Services
 
