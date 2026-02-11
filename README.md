@@ -30,6 +30,7 @@ This two-phase approach acknowledges that the very first step may require a "god
 | [lnvps](./skills/lnvps/SKILL.md) | Setup and manage VPS instances on LNVPS using Lightning payments | Local |
 | [alby-cli](https://raw.githubusercontent.com/getAlby/alby-cli-skill/refs/heads/master/SKILL.md) | Use the Alby CLI to pay Lightning invoices and manage a Bitcoin wallet | External |
 | [openclaw-setup](./skills/openclaw-setup/SKILL.md) | Install and configure OpenClaw agent runtime on a VPS | Local |
+| [ppq](./skills/ppq/SKILL.md) | Configure PayPerQ AI API for LLM access via Lightning payments | Local |
 
 **Machine-readable index:** [`skills.json`](./skills.json)
 
