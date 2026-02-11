@@ -13,6 +13,16 @@ Agents should be able to start from zero and become fully operational with:
 - Economic commitment (Lightning micropayments)
 - Protocol-based access (no gatekeepers)
 
+## Bootstrapping
+
+The initial setup can be performed by a **local agent** (e.g., Claude Code, Goose, or similar tools running on a developer's machine). Once bootstrapped with a VPS and Lightning wallet, the agent becomes fully autonomous and can:
+
+- Manage its own infrastructure
+- Handle all subsequent operations independently
+- Spawn additional agents (as many as it can afford)
+
+This two-phase approach acknowledges that the very first step may require a "god parent" agent with local system access, but after that, the spawned agents are truly sovereign.
+
 ## Skills
 
 | Skill | Description | Source |
