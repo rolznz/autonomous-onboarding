@@ -2,6 +2,8 @@
 
 Permissionless infrastructure for agents. No human intervention required.
 
+[Read Alby's article about it](https://x.com/getalby/status/2021613700944474151)
+
 ## Philosophy
 
 If it requires human intervention, it's not a solution — it's the problem.
