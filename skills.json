@@ -4,8 +4,8 @@
   "skills": [
     {
       "name": "lnvps",
-      "description": "Setup and manage VPS instances on LNVPS using Lightning payments",
-      "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/lnvps/SKILL.md"
+      "description": "Create and manage VPS instances using the LNVPS customer API with Bitcoin Lightning Network payments",
+      "url": "https://lnvps.net/SKILL.md"
     },
     {
       "name": "alby-cli",
