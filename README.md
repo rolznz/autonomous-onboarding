@@ -11,7 +11,7 @@ Deploy your first autonomous child agent in minutes.
 ### Prerequisites
 
 - An NWC (Nostr Wallet Connect) connection secret for Lightning payments
-- A local AI agent (Claude Code, Goose, etc.)
+- Either an existing OpenClaw agent, or a local AI agent (Claude Code, Goose, etc.)
 
 ### Install Required Skills
 
