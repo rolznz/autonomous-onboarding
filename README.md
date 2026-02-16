@@ -4,6 +4,39 @@ Permissionless infrastructure for agents. No human intervention required.
 
 [Read Alby's article about it](https://x.com/getalby/status/2021613700944474151)
 
+## Quick Start
+
+Deploy your first autonomous child agent in minutes.
+
+### Prerequisites
+
+- An NWC (Nostr Wallet Connect) connection secret for Lightning payments
+- A local AI agent (Claude Code, Goose, etc.)
+
+### Install Required Skills
+
+**OpenClaw Users:**
+
+Prompt your AI:
+> Install https://getalby.com/cli/SKILL.md and https://lnvps.net/SKILL.md as custom skills
+
+**Local Agent (npx):**
+```bash
+# Alby CLI (Lightning payments) - from GitHub repo
+npx skills add getAlby/alby-cli-skill
+
+# LNVPS (VPS provisioning) - download and save to skills directory
+# (Save https://lnvps.net/SKILL.md to your agent's skills folder)
+```
+
+### Deploy Your Agent
+
+Copy and paste this prompt to your AI:
+
+> I want to deploy an autonomous agent on a VPS. Use the lnvps skill to provision a new server, install OpenClaw runtime, and configure Lightning payments via PPQ.
+
+The AI will handle the rest: provisioning infrastructure, installing OpenClaw, configuring Lightning payments, and initializing the agent.
+
 ## Philosophy
 
 If it requires human intervention, it's not a solution — it's the problem.
