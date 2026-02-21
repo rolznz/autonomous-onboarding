@@ -21,6 +21,11 @@
       "name": "ppq",
       "description": "Configure PayPerQ (PPQ) AI API for OpenClaw agents with Lightning payments",
       "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/ppq/SKILL.md"
+    },
+    {
+      "name": "lnemail",
+      "description": "Setup and use anonymous email accounts on LNemail.net using Bitcoin Lightning payments",
+      "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/lnemail/SKILL.md"
     }
   ]
 }
