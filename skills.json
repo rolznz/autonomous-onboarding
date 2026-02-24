@@ -26,6 +26,11 @@
       "name": "lnemail",
       "description": "Setup and use anonymous email accounts on LNemail.net using Bitcoin Lightning payments",
       "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/lnemail/SKILL.md"
+    },
+    {
+      "name": "lncurl",
+      "description": "Create disposable Lightning wallets with a single HTTP call for agent bootstrapping and temporary payments",
+      "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/lncurl/SKILL.md"
     }
   ]
 }
