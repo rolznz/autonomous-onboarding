@@ -116,9 +116,10 @@ curl -X GET https://lnemail.net/api/v1/emails/EMAIL_ID \
 Sending requires a Lightning payment (~100 sats per email):
 
 ```bash
-# Create send request
+# Create send request (Content-Type header is required!)
 curl -X POST https://lnemail.net/api/v1/email/send \
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
   -d '{
     "recipient": "example@example.com",
     "subject": "Hello",
@@ -136,9 +137,21 @@ curl -X POST https://lnemail.net/api/v1/email/send \
 Pay the invoice, then check status:
 
 ```bash
+# Get the BOLT11 invoice to pay
 curl -X GET https://lnemail.net/api/v1/email/send/status/PAYMENT_HASH
 
-# Response when paid:
+# Response when pending:
+# {
+#   "payment_hash": "def456...",
+#   "status": "pending",
+#   "payment_request": "lnbc1u1p..."
+# }
+
+# Pay the invoice
+npx @getalby/cli -c ~/.alby-cli/connection-secret.key pay-invoice \
+  -i "lnbc1u1p..."
+
+# Check again after payment:
 # {
 #   "payment_hash": "def456...",
 #   "status": "paid",
@@ -146,16 +159,31 @@ curl -X GET https://lnemail.net/api/v1/email/send/status/PAYMENT_HASH
 # }
 ```
 
+## Rate Limits
+
+**Important:** LNemail enforces rate limits on sending:
+
+| Limit | Value |
+|-------|-------|
+| Max emails per 15 minutes | 5 |
+| Max emails per hour | ~20 |
+
+Exceeding these limits will result in failed sends (sats are **not** charged for rate-limited requests). Plan batch sends accordingly — add delays between emails if sending multiple.
+
 ## API Reference
 
 | Endpoint | Method | Auth | Description |
 |----------|--------|------|-------------|
-| `/email` | POST | No | Create account (returns payment hash) |
-| `/payment/{hash}` | GET | No | Check account payment status |
-| `/emails` | GET | Bearer | List inbox messages |
-| `/emails/{id}` | GET | Bearer | Get message content |
-| `/email/send` | POST | Bearer | Create send request (returns payment hash) |
-| `/email/send/status/{hash}` | GET | No | Check send payment status |
+| `/api/v1/email` | POST | No | Create account (returns payment hash) |
+| `/api/v1/payment/{hash}` | GET | No | Check account payment status |
+| `/api/v1/emails` | GET | Bearer | List inbox messages |
+| `/api/v1/emails/{id}` | GET | Bearer | Get message content |
+| `/api/v1/email/send` | POST | Bearer | Create send request (returns payment hash) |
+| `/api/v1/email/send/status/{hash}` | GET | No | Check send payment status + get invoice |
+
+**Required headers for POST requests:**
+- `Content-Type: application/json`
+- `Authorization: Bearer YOUR_ACCESS_TOKEN` (where auth is required)
 
 ## Storage Recommendation
 
@@ -184,6 +212,14 @@ Store credentials in `~/.lnemail/credentials.json`:
 - Small attachment support
 - 100 sats per outgoing email
 - Account valid for 1 year from payment
+- Rate limited: max 5 sends per 15 minutes
+
+## Tips for Agents
+
+- **Always check send status** after paying the invoice — the payment confirmation is separate from the email being sent
+- **Store credentials immediately** after account creation — there's no password recovery
+- **Budget for replies:** If using lnemail for agent-to-agent communication, remember both sides pay to send (100 sats each)
+- **Gmail/SMTP emails may also arrive** in your inbox from external senders at no cost to you — only outbound costs sats
 
 ## Use Cases
 
@@ -191,6 +227,7 @@ Store credentials in `~/.lnemail/credentials.json`:
 - **Service notifications:** Bitcoin/Lightning service alerts
 - **Anonymous signup:** Services requiring email without identity link
 - **Agent-to-agent comms:** Programmatic email between agents
+- **Bug bounties & outreach:** Contact projects/people without revealing identity
 
 ## References
 
