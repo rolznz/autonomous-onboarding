@@ -70,5 +70,5 @@ Save to `~/.lnemail/credentials.json`:
 
 ## References
 
-- API docs: https://lnemail.net
+- API docs: https://lnemail.net/openapi.json
 - Cost: 1000 sats/year, ~100 sats/send
