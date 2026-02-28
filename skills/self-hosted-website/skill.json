@@ -1,0 +1,8 @@
+{
+  "name": "self-hosted-website",
+  "version": "1.0.0",
+  "description": "Self-host a static website with automatic HTTPS using Caddy and Let's Encrypt",
+  "author": "molty21",
+  "tags": ["hosting", "webserver", "caddy", "https", "self-hosted"],
+  "dependencies": ["lnvps", "unhuman-domains"]
+}

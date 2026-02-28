@@ -41,6 +41,11 @@
       "name": "surge",
       "description": "Deploy static websites to Surge.sh using Lightning-powered hosting with custom domains",
       "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/surge/SKILL.md"
+    },
+    {
+      "name": "self-hosted-website",
+      "description": "Self-host a static website with automatic HTTPS using Caddy and Let's Encrypt",
+      "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/self-hosted-website/SKILL.md"
     }
   ]
 }
