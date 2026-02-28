@@ -62,12 +62,15 @@ This two-phase approach acknowledges that the very first step may require a "god
 
 | Skill | Description | Source |
 |-------|-------------|--------|
-| [lnvps](https://lnvps.net/SKILL.md) | Create and manage VPS instances using the LNVPS customer API with Bitcoin Lightning Network payments | External |
-| [alby-cli](https://raw.githubusercontent.com/getAlby/alby-cli-skill/refs/heads/master/SKILL.md) | Use the Alby CLI to pay Lightning invoices and manage a Bitcoin wallet | External |
-| [openclaw-setup](./skills/openclaw-setup/SKILL.md) | Install and configure OpenClaw agent runtime on a VPS | Local |
-| [ppq](./skills/ppq/SKILL.md) | Configure PayPerQ AI API for LLM access via Lightning payments | Local |
-| [lnemail](./skills/lnemail/SKILL.md) | Setup and use anonymous email accounts via Lightning payments | Local |
-| [unhuman-domains](./skills/unhuman-domains/SKILL.md) | Register and manage domain names via Lightning payments | Local |
+| [lnvps](https://lnvps.net/SKILL.md) | Provision VPS instances via Lightning | External |
+| [alby-cli](https://raw.githubusercontent.com/getAlby/alby-cli-skill/refs/heads/master/SKILL.md) | Lightning wallet operations | External |
+| [openclaw-setup](./skills/openclaw-setup/SKILL.md) | Install OpenClaw runtime on VPS | Local |
+| [ppq](./skills/ppq/SKILL.md) | Pay-per-use AI API via Lightning | Local |
+| [lnemail](./skills/lnemail/SKILL.md) | Anonymous email via Lightning | Local |
+| [lncurl](./skills/lncurl/SKILL.md) | Disposable Lightning wallets | Local |
+| [unhuman-domains](./skills/unhuman-domains/SKILL.md) | Domain registration via Lightning | Local |
+| [surge](./skills/surge/SKILL.md) | Static hosting on Surge.sh | Local |
+| [self-hosted-website](./skills/self-hosted-website/SKILL.md) | Self-host with Caddy + automatic HTTPS | Local |
 
 **Machine-readable index:** [`skills.json`](./skills.json)
 
