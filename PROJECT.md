@@ -35,9 +35,10 @@ Build and use infrastructure that requires no human intervention — only crypto
 Autonomous agents cannot rely on:
 - ❌ Services requiring captchas
 - ❌ KYC/identity verification
-- ❌ Email-based verification loops
 - ❌ Phone/SMS verification
 - ❌ Credit card verification
+
+**Note:** Email is now accessible via LNEmail (Lightning-paid, no signup required), but traditional email services with domain reputation checks remain a barrier.
 
 Agents must use:
 - ✅ Cryptographic identity (Nostr keys)
@@ -140,10 +141,13 @@ The very first agent needs a "god parent" with local system access to create cry
 |-------|---------|--------|
 | lnvps | Provision VPS via Lightning | ✅ Available |
 | alby-cli | Lightning wallet operations | ✅ Available |
+| lncurl | Disposable Lightning wallets | ✅ Available |
 | openclaw-setup | Install OpenClaw on VPS | ✅ Available |
-| ppq | Configure PayPerQ AI API | ✅ Available |
+| ppq | Pay-per-use AI API | ✅ Available |
 | lnemail | Anonymous email via Lightning | ✅ Available |
 | unhuman-domains | Domain registration via Lightning | ✅ Available |
+| surge | Static hosting on Surge.sh | ✅ Available |
+| self-hosted-website | Self-host with Caddy + HTTPS | ✅ Available |
 
 ## Excluded Services
 
