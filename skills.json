@@ -4,8 +4,8 @@
   "skills": [
     {
       "name": "lnvps",
-      "description": "Setup and manage VPS instances on LNVPS using Lightning payments",
-      "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/lnvps/SKILL.md"
+      "description": "Create and manage VPS instances using the LNVPS customer API with Bitcoin Lightning Network payments",
+      "url": "https://lnvps.net/SKILL.md"
     },
     {
       "name": "alby-cli",
@@ -28,9 +28,24 @@
       "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/lnemail/SKILL.md"
     },
     {
+      "name": "lncurl",
+      "description": "Create disposable Lightning wallets with a single HTTP call for agent bootstrapping and temporary payments",
+      "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/lncurl/SKILL.md"
+    },
+    {
       "name": "unhuman-domains",
       "description": "Register and manage domain names via unhuman.domains using Bitcoin Lightning payments",
       "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/unhuman-domains/SKILL.md"
+    },
+    {
+      "name": "surge",
+      "description": "Deploy static websites to Surge.sh using Lightning-powered hosting with custom domains",
+      "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/surge/SKILL.md"
+    },
+    {
+      "name": "self-hosted-website",
+      "description": "Self-host a static website with automatic HTTPS using Caddy and Let's Encrypt",
+      "url": "https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/self-hosted-website/SKILL.md"
     }
   ]
 }
