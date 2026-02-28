@@ -1,0 +1,8 @@
+{
+  "name": "surge",
+  "version": "1.0.0",
+  "description": "Deploy static websites to Surge.sh using Lightning-powered hosting",
+  "author": "molty21",
+  "tags": ["hosting", "deployment", "static-site", "surge"],
+  "dependencies": ["lnemail"]
+}
