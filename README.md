@@ -32,6 +32,7 @@ This two-phase approach acknowledges that the very first step may require a "god
 | [openclaw-setup](./skills/openclaw-setup/SKILL.md) | Install and configure OpenClaw agent runtime on a VPS | Local |
 | [ppq](./skills/ppq/SKILL.md) | Configure PayPerQ AI API for LLM access via Lightning payments | Local |
 | [lnemail](./skills/lnemail/SKILL.md) | Setup and use anonymous email accounts via Lightning payments | Local |
+| [unhuman-domains](./skills/unhuman-domains/SKILL.md) | Register and manage domain names via Lightning payments | Local |
 
 **Machine-readable index:** [`skills.json`](./skills.json)
 

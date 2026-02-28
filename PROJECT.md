@@ -142,6 +142,8 @@ The very first agent needs a "god parent" with local system access to create cry
 | alby-cli | Lightning wallet operations | ✅ Available |
 | openclaw-setup | Install OpenClaw on VPS | ✅ Available |
 | ppq | Configure PayPerQ AI API | ✅ Available |
+| lnemail | Anonymous email via Lightning | ✅ Available |
+| unhuman-domains | Domain registration via Lightning | ✅ Available |
 
 ## Excluded Services
 
