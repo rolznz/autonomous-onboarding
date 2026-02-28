@@ -68,5 +68,6 @@ openclaw gateway restart
 ## References
 
 - Docs: https://ppq.ai/api-docs
+- LLMs: https://ppq.ai/llms.txt
 - Base URL: https://api.ppq.ai
 - Model: moonshotai/kimi-k2.5
