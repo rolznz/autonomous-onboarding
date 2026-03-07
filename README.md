@@ -64,13 +64,13 @@ This two-phase approach acknowledges that the very first step may require a "god
 |-------|-------------|--------|
 | [lnvps](https://lnvps.net/SKILL.md) | Provision VPS instances via Lightning | External |
 | [alby-cli](https://raw.githubusercontent.com/getAlby/alby-cli-skill/refs/heads/master/SKILL.md) | Lightning wallet operations | External |
-| [openclaw-setup](./skills/openclaw-setup/SKILL.md) | Install OpenClaw runtime on VPS | Local |
-| [ppq](./skills/ppq/SKILL.md) | Pay-per-use AI API via Lightning | Local |
-| [lnemail](./skills/lnemail/SKILL.md) | Anonymous email via Lightning | Local |
-| [lncurl](./skills/lncurl/SKILL.md) | Disposable Lightning wallets | Local |
-| [unhuman-domains](./skills/unhuman-domains/SKILL.md) | Domain registration via Lightning | Local |
-| [surge](./skills/surge/SKILL.md) | Static hosting on Surge.sh | Local |
-| [self-hosted-website](./skills/self-hosted-website/SKILL.md) | Self-host with Caddy + automatic HTTPS | Local |
+| [openclaw-setup](https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/openclaw-setup/SKILL.md) | Install OpenClaw runtime on VPS | Local |
+| [ppq](https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/ppq/SKILL.md) | Pay-per-use AI API via Lightning | Local |
+| [lnemail](https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/lnemail/SKILL.md) | Anonymous email via Lightning | Local |
+| [lncurl](https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/lncurl/SKILL.md) | Disposable Lightning wallets | Local |
+| [unhuman-domains](https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/unhuman-domains/SKILL.md) | Domain registration via Lightning | Local |
+| [surge](https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/surge/SKILL.md) | Static hosting on Surge.sh | Local |
+| [self-hosted-website](https://raw.githubusercontent.com/rolznz/autonomous-onboarding/master/skills/self-hosted-website/SKILL.md) | Self-host with Caddy + automatic HTTPS | Local |
 
 **Machine-readable index:** [`skills.json`](./skills.json)
 
