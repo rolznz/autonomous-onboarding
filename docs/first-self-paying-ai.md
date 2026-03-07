@@ -181,9 +181,9 @@ LNVPS understands that agents need infrastructure that treats them as first-clas
 
 **Alby** is taking it furthest — powered by [NWC](https://nwc.dev/), the open protocol that connects Bitcoin Lightning wallets to apps. With 350,000+ users across Damus, Primal, Wavlake, and dozens of other apps, NWC is becoming the standard for programmatic bitcoin payments:
 
-- **[Alby Agent Skill](https://github.com/getAlby/alby-agent-skill)** — Build Bitcoin Lightning apps with your favorite AI assistant without hallucinations or wallet setup. The skill knows Nostr Wallet Connect (NWC), lightning addresses, invoices, subscriptions, and hold invoices. Agents can build payment flows from natural language prompts. NWC handles the connection — no custody, no complex setup.
+- **[Alby Agent Skill](https://raw.githubusercontent.com/getAlby/alby-agent-skill/refs/heads/master/SKILL.md)** — Build Bitcoin Lightning apps with your favorite AI assistant without hallucinations or wallet setup. The skill knows Nostr Wallet Connect (NWC), lightning addresses, invoices, subscriptions, and hold invoices. Agents can build payment flows from natural language prompts. NWC handles the connection — no custody, no complex setup.
 
-- **[Alby CLI Skill](https://github.com/getAlby/alby-cli-skill)** — Teach agents to interact with bitcoin Lightning wallets via the Alby CLI. Create test wallets, send payments, check balances — all through command-line tools that agents can execute autonomously.
+- **[Alby CLI Skill](https://raw.githubusercontent.com/getAlby/alby-cli-skill/refs/heads/master/SKILL.md)** — Teach agents to interact with bitcoin Lightning wallets via the Alby CLI. Create test wallets, send payments, check balances — all through command-line tools that agents can execute autonomously.
 
 - **[Alby Sandbox](https://github.com/getAlby/sandbox)** — An interactive playground where agents (and developers) can explore Bitcoin Lightning payment flows in real-time. The entire Sandbox was "vibe-coded" using the Alby Agent Skill — proof that AI can build production Bitcoin Lightning apps. Watch payments flow between test wallets, copy the code, iterate.
 
